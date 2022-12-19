@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 float f(float y){
-    float x = pow(y, 2) * cos(y) + 1;
+    float x = pow(y, 2) * cosf(y) + 1;
     return x;
 }
 int main(){
