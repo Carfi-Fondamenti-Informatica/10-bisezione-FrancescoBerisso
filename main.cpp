@@ -1,23 +1,22 @@
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 using namespace std;
 float f(float y){
-    float x = pow(y, 2) * cosf(y) + 1;
+    float x = pow(y, 2) * cos(y) + 1;
     return x;
 }
 int main(){
     float a = 0, b = 0, x = 0, err = 0;
     do{
         cout << "inserire estremi";
-        cin >> a;
-        cin >> b;
+        cin >> a >> b;
     }while(f(a) * f(b) >= 0);
     do{
         x = (a + b) / 2;
         if(f(x) == 0){
-            cout << setprecision(4) << x << endl;
-            cout << setprecision(4) << f(x) << endl;
+            cout << x;
+            cout << f(x);
+            return 0;
         }
         else{
             if(f(a) * f(b) < 0){
@@ -28,8 +27,8 @@ int main(){
             }
             err = abs((b - a) / 2);
         }
-    }while(err >= 1 * pow(M_E, -6));
-    cout << setprecision(4) << x << endl;
-    cout << setprecision(4) << f(x) << endl;
+    }while(err >= 1e-6);
+    cout << x;
+    cout << f(x);
     return 0;
 }
