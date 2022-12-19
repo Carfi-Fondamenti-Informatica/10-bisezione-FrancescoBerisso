@@ -1,5 +1,4 @@
 #include <iostream>
-#include <valarray>
 #include <cmath>
 #include <iomanip>
 using namespace std;
