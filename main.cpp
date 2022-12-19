@@ -10,7 +10,8 @@ int main(){
     float a = 0, b = 0, x = 0, err = 0;
     do{
         cout << "inserire estremi";
-        cin >> a >> b;
+        cin >> a;
+        cin >> b;
     }while(f(a) * f(b) >= 0);
     do{
         x = (a + b) / 2;
