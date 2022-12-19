@@ -14,8 +14,8 @@ int main(){
     do{
         x = (a + b) / 2;
         if(f(x) == 0){
-            cout << x;
-            cout << f(x);
+            cout << (x * 10000) / 10000.0 << endl;
+            cout << f(x) << endl;
             return 0;
         }
         else{
@@ -28,7 +28,7 @@ int main(){
             err = abs((b - a) / 2);
         }
     }while(err >= 1e-6);
-    cout << x;
-    cout << f(x);
+    cout << (x * 10000) / 10000.0 << endl;
+    cout << f(x) << endl;
     return 0;
 }
