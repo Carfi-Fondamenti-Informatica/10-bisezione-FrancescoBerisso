@@ -12,7 +12,7 @@ int main(){
         cin >> a >> b;
     }while(f(a) * f(b) >= 0);
     do{
-        x = (a + b) / 2;
+        a = (a + b) / 2;
         if(f(x) == 0){
             cout << (x * 10000) / 10000.0 << endl;
             cout << f(x) << endl;
